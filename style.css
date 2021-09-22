@@ -1,5 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+:root {
+  --primary-color: #4ca1ff;
+  --text: #333333;
+  --gray: #f8f8f8;
+
+  --margin-top: 30px;
+  --display: flex;
+  --padding: 20px;
+  --border: 1px solid grey;
+  --background-color:#fff;
+  --color:rgb(55, 71, 219);
+  --font-size: 18px;
+  --border-radius: 15px;
+}
+
+
 
 body {
   padding: 20px;
@@ -144,23 +160,45 @@ header {
     color:black;
   }
 /* info */
-.info {
+.info__active {
   margin-top: 30px;
   display: flex;
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid grey;
   background-color:#fff;
-  color:black;
+  color:rgb(55, 71, 219);
   font-size: 18px;
   border-radius: 15px;
 }
+.info__icon-active{
+  color:green;
+  width: 20%;
+}
 
 
-.info:hover {
- background-color: black;
+.info__active:hover {
+ background-color: purple;
   color:#fff;
 }
+.info__service{
+  margin-top: 30px;
+  display: flex;
+  padding: 20px;
+  border: 1px solid grey;
+  background-color:#fff;
+  color:rgb(55, 71, 219);
+  font-size: 18px;
+  border-radius: 15px;
+
+
+}
+.info__text-title-service{
+  color:red;
+  font-size: 20px;
+  font-weight: 700;
+}
 .info__icon {
+  color:red;
   width: 20%;
 }
 .info__text {
