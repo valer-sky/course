@@ -6,15 +6,11 @@ body {
   height: 100%;
   font-size: 17px;
   font-family: "Noto+Sans, sans-serif;
- 
-
-}
+ }
 
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  
-  
 }
 header {
   width: 100%;
@@ -55,7 +51,6 @@ header {
 }
 .menu ul li:first-child{
   margin-left: 0;
-  
 }
 
 .menu ul li a {
@@ -80,8 +75,7 @@ header {
    align-items: center;
    min-width: 175px;
    font-size: 14px;
-
- }
+}
  .btn-darc{
    background-color:black;
    color:#fff;
@@ -105,12 +99,10 @@ header {
   border: 1px solid black;
   border-radius: 5px;
   text-decoration: none;
-  
 }
 .sidebar__list {
   list-style: none;
-    
-}
+  }
 .sidebar__list ul{
   width: 150px; /* Ширина меню */
     list-style: none;
@@ -188,15 +180,13 @@ header {
 .main__right-title{
    text-align: center;
    margin-top: 30px;
-
 }
 
 
 .card-list{
   display:flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-
+  flex-wrap: wrap
 }
 .card{
   border: 2px solid grey;
@@ -207,7 +197,6 @@ header {
   align-items: center;
   margin: 15px;
   position: relative;
-
 }
 
 .card_img{
@@ -232,8 +221,6 @@ header {
   box-sizing: 0;
   left: 0;
   bottom:0;
- 
-  
 }
 .card_btn div{
   height: 40px;
@@ -244,7 +231,6 @@ header {
 .card_btn div:nth-child(1){
   background-color: black;
   color:#fff;
- 
 }
 .card_btn div:nth-child(2){
   background-color: grey;
@@ -268,13 +254,12 @@ header {
   font-size: 14px;
   line-height: 16px;
   margin-top: 15px;
-
 }
 .product_description-prise{
   font-size: 25px;
   font-weight: 600;
   margin-top: 20px;
-  }
+}
 
  .product_description-sail {
    display: flex;
@@ -295,8 +280,6 @@ header {
   padding: 5px;
   font-size: 14px;
   font-weight: 700;
-
-
 }
 .product_description-cards .visa{
   color: orange;
@@ -317,19 +300,10 @@ header {
 }
 .product_description-cartBtn .count input{ 
   max-width: 95px;
-  }
-
-
+}
 .product_description-btn{
   margin-top: 15px;
 }
-
-
-
-
-
-
-
 
 
 .product_slider {
@@ -356,7 +330,6 @@ header {
 }
 .product_review-btn .btn{
   background-color:#fff;
-  
 }
 
 
@@ -366,24 +339,17 @@ header {
   height:120px;
   border-collapse:collapse;
   align-items:left;
-  
- 
-  
 }
 .tab-item-active thead th{
   border: 1px solid black;
   background-color:#fff;
   width: 300px;
   align-items:left;
- 
-  
-
 }
 .tab-item-active tbody th{
   border: 1px solid black;
   align-items:left;
   height: 30px;
-
 }
 .main__right-product{
   text-align: center;
@@ -393,47 +359,32 @@ header {
 .main__right-title{
   text-align: left;
 }
-
 .sorting{
   text-align: left;
   display: flex;
  
   
 }
-
-  
 /*Page 5*/
 .main_page{
   display: flex;
   flex-direction: column;
-  margin-left:540px; 
+  margin-left:30px; 
   margin-top: 35px;
   margin-bottom: 50px;
-  
- 
-  
 }
-
-
-
-.circle ul li{
+  
+ .circle ul li{
   
   margin-right: 50px;
   padding-left: 30px;
-
-
 }
 /*Page 4*/
 
-  
-
-
-.main__contacts-title{
+  .main__contacts-title{
   text-align: left;
   margin: 30px;
 }
-
-
 
 .contacts_info{
   border: 1px solid gray;
@@ -445,7 +396,6 @@ header {
   align-content: space-around;
   justify-content: space-around;
   flex-wrap: wrap;
-
 }
 .main__contacts-title{
   display: flex;
@@ -464,7 +414,6 @@ header {
   text-align: center;
 }
 .write_info{
-
   display: flex;
   flex-direction: column;
   margin: 15px 0px 50px 0px;
@@ -472,30 +421,22 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  
 }
 .write {
-  
   padding: 5px;
   border-bottom-width: 1px solid black;
  }
 
 .write_info{
   margin-left: 50px;
- 
 }
 .write_us input{
   margin-right: 30px;
-
 }
 .button_2 button{
   margin-top: -30px;
   margin-bottom: 50px;
   margin-left: 50px;
-
-
-
-
 }
 
 
@@ -525,9 +466,7 @@ footer {/* заголовок футера (айфоносервис)*/
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  
-}
-
+  }
 
 .footer__top .text2{
   display:flex;
@@ -541,28 +480,21 @@ footer {/* заголовок футера (айфоносервис)*/
   color: orange;
   display:flex;
   margin-top: 15px;
-  
 }
 
 
 .menu2 ul{
   list-style: none;
   display: flex;
-  
   margin: 0;
   padding: 0;
- 
-}
+ }
 .menu2 ul li {
   margin-left: 35px; 
   margin-top: 15px;
 }
 
-  
-
-
-.menu2 ul li a {
+  .menu2 ul li a {
   color:#fff;
   text-decoration: none;
-
 }
