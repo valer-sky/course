@@ -269,7 +269,7 @@ font-weight: 700
   position: relative;
 }
 .card:hover{
-  border-color:var(--gray);;
+  border-color:var(--gray);
 }
 
 .card_img {
