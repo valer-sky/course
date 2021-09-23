@@ -259,7 +259,7 @@ font-weight: 700
   flex-wrap: wrap
 }
 .card{
-  border: 2px solid gray;
+  border: 2px solid rgb(255, 255, 255);
   padding: 15px;
   padding-bottom: 90px;
   display: flex;
@@ -267,6 +267,9 @@ font-weight: 700
   align-items: center;
   margin: 15px;
   position: relative;
+}
+.card:hover{
+  border-color:var(--gray);;
 }
 
 .card_img {
