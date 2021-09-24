@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(1494)https://r.mradx.net/h5/D9/EF49DD9E/155EE6C213.html?link1=AACv8QFyrlZ39zWYhgX_1nLwb4_Olyjr3fzPTSbD-rHvqv69jXA12eIByyElEpv0LKlfiDvftXXKVfgdm_W4CkspLxWGK27BiSoBRbmuvOANA103gpTUTkwyLsnqWe9Sk2E3w2tT_KUh17Oyz1X9UtXcWz-hAvmOIWSKe1kxQaeGtGBtBLZCl1V_AAAANjUD-B6afl5VuRu5nBZN-pe3G35SLrOV-gjQ5uVqxkgcB-pqvwR_k3ZgT_K4gErBGetxbXeB9uWxdRCgBA4UogIgdfhqVdhdy6Tt5YMRWT-hVQh16xaR-lFemetOKKSVe2q5SBXujz4uA1Yx7oCbosaMSWz4y_XVWfNvgwWyDBo&link2=&link3=&link4=&link5=&data=AACv8QFyrlZ39zWYhgX_1nLwb4_Olyjr3fzPTSbD-rHvqv69jXA12eIByyElEpv0LKlfiDvftXXKVfgdm_W4CkspLxWGK27BiSoBRbmuvOANA103gpTUTkwyLsnqWe9Sk2E3w2tT_KUh17Oyz1X9UtXcWz-hAvmOIWSKe1kxQaeGtGBtBK4iEUl7AgAA2gZ3SGMZr4lLchiP4z6uQqVCmzLhja9O5p3BViDgf9yO75Q7HUltl-CQHa3Pvn6jHOKvabkFWN_NlrfrKMJjhhHvUkUzpqQZe3Z4DYVRCzcJvc5OwnK1XKKWEeZQ8BQXemx-%2DAatLCnVK0hxBXGXjfr75ih_afZARG1WBoqSCARANz9j0XyHwAmsSYSkO0B4OhMx_KZGhTXWIUjYBUCNsXkT3k_HgpjC8U5wvOfV_snRC5-6Pselk3oEgQS_32k6iCQY28jEEzdHuVtAJISj_VX8BWdwaG1RSZM4znNxkhj7XrCP9iz8xYt6VqKnYF5pY0yS8F581uKZB861ahEDRKQUS14KZ-eZDPEuVbiwFGB2_tyh_Bc5k6z_h9JXLJUnYyYnV1hFM8eKv9f1_ii1VEJCJzGwJs8wwVPEG_Kev4rZWBgD1yn-McWExt3qUNstQQwbtp4YdNH216VDkGM2-44mq7smftWEOwMszT2Oz-c4_GJBwuVv91Q3VO9WQuFn-YrHuikFeJH8VgN8z5khUi65F1J6x2MP_EfD1pH8E5RREqkx6B8DYints89FGZmYxtRAaiHFp31SNhJXiyJKx-lGNeBt3NmMwh_ucBlQApIN2jcJj-GyWZsUpYV9FlwG5OOB0ikUcQGvUsqUcmWe6CHCgDmtKDyJ6tK3c-NR_DHHrQdqdICpLgFLG4_AO6otNXLxNDLQ30wvCQRRyxS58gQvydQVeix-kvTxIhBWQthUpRcEWr2QDaoWdhQ5Mffd9_exW1KuM3pWXKoCnXn62f-YPBeN0bhc4LXmpXJe2Ut8QHeyoru_lpMuDN22vq_a3Q6HGQchB0ENzNq6e_Uuzw -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<meta name="ad.size" content="width=100%,height=200">
+<title>FB_100Px200</title>
+<!-- write your code here -->
+<script src="./createjs.min.js(1).Без названия"></script>
+<script src="./FB_100Px200.js.Без названия"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("144D69D01B694E10BD820780A5820418");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.FB_100Px200();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+<style type="text/css">
+    body,html{
+        overflow: hidden;
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+    }
+            #canvas {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .canvas-wrapper {
+            position: absolute;
+                left: 0;
+                width: 100%;
+                height: 200px;
+                z-index: 99;
+                box-sizing: border-box;
+                overflow: hidden;
+        }
+</style></head>
+
+
+<body onload="init();" style="margin:0px;" marginwidth="0" marginheight="0">
+<a href="https://r.mail.ru/redir/AACv8QFSeRz2a3_EWTP8FJckgEIKq1lKYDRkhjQhPhFn0-Ao4KlQ5dF53P_zbWMrAhdg9VSa1bK5Bgc41Q7ACO4Brdj3_2p5xARcQOM00zSAJI3TdH48GKDUNBamei3nrvK6_cRo4eIOpAw2xuw7HP99YnexaGrb1c9AdTfNyT-kMVBINg-HRnn7AgAAhX8QbmPXPMLI0fMCwsf8dS5lYx7ZWQuwY4eHpTpqvsD1rXW1VCC-cjntQgbf8D-VHcaWyMgt57Ec_qe63pp_0yo6qc3UAloC5lPEpcP-f9TZSJkTuCaOG93FyCL2Ng1LkrGczrLaOfu3-Q4UKNNi-9F1y4MGeHooYbAnz6HWphbAgYzNGDtaXwDmewaexFMgjcfQg9MK2ofuB0a64zHvHpXdy1HKkem9poCFhiUtK0zOfYL4CWvetjUbk6qOCz_Vcb3LYSkjXobkuVeVTTolGr2FRl04eQft7eoo0eB7MwnD8CJ1Ee3QvGHnb3hldCs3BQh55JRMpb2m5EbyBU6x07anYUe3zy4gDTfYx8DD3WlFTa3lwzDdgC_U1rdyIYpA3SGiq9j8o5J8TbIUedCQZdbrLVK2AcbVTT5a85acvU3mrU0girw2xcpFVSiQBmMAGP685mzHbRDbjkOHJaYpiq4h1ZCRBelzYQfIfWuiq74_dbaL1wW6hd4M1-RHoDBYP5dJlBZWy6qR0XkXzSlnDsDpfwIJLglFN08Um0gJZm2fnr_AfhdaMLgCCfHR4nDnA1qV9ksTzIZ-CQxgDptAt1Dq6eRPvtayABturyLgZ62sbJeEfH4H2NXu4jWUXuJ5To7omgTSqe4ADX-evZ3Rk6iNos2LoLqMZGNEKZB4Hu7y_Uip6qMLTHtjW0uyYTnRnQIkZRywiG4k7QCL7T5aoVvMfSNtU5AQiZOBgKls6dP0i_slJ4iKpa8AuEqh5JHvmmDCl9YjykZ47ZV_T0p14VHKFWsK_QuOKx2DZTIKKyePttCLrajU1LlRVUW_2Si_OFNuVcsIXScEzUBfNj_FiwClVImn6K0NpptULr4d5IAGcT-2XEZrsFepegP2sOuJFenpniGf7OmE0mKjBwlNFIP4q29o7Qi8FFk0C1VV7HujyfAlLYOTxcK4h_jQToEGorG8ALsjgcDZ0pSgxGpGoM3j6VRiC3AAnPqTgyxQqYn-cxKSKtpYvdMysXCxHYdk" target="_blank">
+	<div class="canvas-wrapper">
+	<div id="animation_container" style="background-color: rgb(255, 255, 255); max-width: 100%; min-width: 100%; height: 200px; width: 500px;">
+		<canvas id="canvas" width="625" height="250" style="position: absolute; display: block; background-color: rgb(255, 255, 255); width: 500px; height: 200px;"></canvas>
+		<div id="dom_overlay_container" style="pointer-events: none; overflow: hidden; max-width: 100%; min-width: 100%; height: 200px; position: absolute; left: 0px; top: 0px; display: block; box-shadow: rgb(102, 102, 102) 0px 0px 0px 1px inset; width: 500px;">
+		</div>
+		</div>
+	</div>
+</a>
+
+<div id="preloadjs-container" style="visibility: hidden; position: absolute; height: 10px; width: 10px; overflow: hidden; transform: translate(-10px, -10px);"></div></body></html>

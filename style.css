@@ -1,75 +1,127 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
 :root {
   --primary-color: #4ca1ff;
   --text: #333333;
   --gray: #f8f8f8;
 }
-
-
-
 body {
-  padding: 20px;
-  height: 100%;
-  font-size: 17px;
-  font-family: "Noto+Sans, sans-serif;
- }
-
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
 .wrapper {
-  max-width: 1200px;
+  max-width: 1190px;
   margin: 0 auto;
 }
+/* header */
 header {
   width: 100%;
-  color: #fff; /* цвет текста */
 }
-
+.headder-wrapper {
+  background-color: var(--text);
+}
 .header__top {
-  padding: 30px;
-  background-color: rgb(44, 42, 42); /* цвет заливки блока */
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 15px;
 }
-.header__info {
-  display: block;
+.header__top-logo a{
+  text-decoration: none;
+  color: #fff;
 }
-.header__top input {
-  min-width: 250px;
-  width: 100%;
+.header__top-logo span{
+  color: rgba(255, 255, 255, 0.438);
 }
-.info__phone a {
-  color: orange;
+.header__top-input {
+  min-width: 350px;
+  background-color: var(--text);
+  color:#fff;
+  padding: 5px 10px;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
 }
-.menu {
-  width: 100%;
+.header__top-search {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 8px;
+  overflow: hidden;
 }
-.menu ul{
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
- 
-}
-.menu ul li {
-  margin-left: 15px;
-}
-.menu ul li:first-child{
-  margin-left: 0;
+.header__top-search::after {
+  content: '\f002';
+  font-family: 'Font Awesome 5 Pro';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  font-size: 20px;
+  line-height: 22px;
+  color:#fff;
+  z-index: 2;
 }
 
-.menu ul li a {
-  text-decoration: none;
-  color: orange;
-  display: block;
-  transition: 0.3s ease-in all;
-  border: 10px black;
+
+.header__top-info {
+  display: flex;
+  color: rgba(255, 255, 255, 0.521);
 }
-.menu ul li a:hover {
-  color:red;
-  transform: scale(1.1);
+.header__top-info a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out all;
+}
+.header__top-info a:hover {
+  color: var(--primary-color);
+}
+.header__top-info .accaunt {
+  margin-right: 15px;
+}
+.header__top-info .accaunt i {
+  display: inline-block;
+  font-style: normal;
+  color: #fff;
+  margin-right: 5px;
+}
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__bottom-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__bottom-menu a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 15px;
+}
+.header__bottom-menu a:hover {
+  text-decoration:underline;
+}
+
+
+.header__cart {
+  background-color: #17ac1a;
+  padding: 15px;
+  color: #fff;
+  display: flex;
+  min-width: 300px;
+}
+.header__cart i {
+  font-style: normal;
+  margin-right: 10px;
+}
+.header__cart #count_cart {
+  margin-right: 5px;
 }
  /* btn*/
  .btn{
@@ -111,7 +163,7 @@ header {
   list-style: none;
   }
 .sidebar__list ul{
-  width: 150px; /* Ширина меню */
+  width: 200px; /* Ширина меню */
     list-style: none;
     margin: 0; 
     padding: 0; 
@@ -126,17 +178,19 @@ header {
 }
 .sidebar__list li a{
      display: block; /* Ссылка как блочный элемент */
-    padding: 5px; /* Поля вокруг надписи */
+    padding: 0px; /* Поля вокруг надписи */
     text-decoration: none; /* Подчеркивание у ссылок убираем */
-    color:black; /* Цвет текста */
+    color:gray; /* Цвет текста */
     border: none;/* Рамка вокруг пунктов меню */
     background-color: none;/* Цвет фона */
     border-bottom: none; /* Границу снизу не проводим */
 }
 .sidebar__list li a:hover{
   color:#fff; /* Цвет текста активного пункта */
-  background-color:black;/* Цвет фона активного пункта */
+  background-color:var(--primary-color);/* Цвет фона активного пункта */
+margin-top: 0%;
 }
+
 .sidebar__list li:hover ul{
   display: block; /* При выделении пункта курсором мыши отображается подменю */
    }
@@ -580,7 +634,6 @@ footer {/* заголовок футера (айфоносервис)*/
     padding-left:15px;
     padding-right: 15px;
   }
-
 }
 @media (max-width:900px){
   .header__top{
@@ -594,5 +647,7 @@ footer {/* заголовок футера (айфоносервис)*/
       order:2;
       margin-top: 15px;
     }
-    .header__top-info
+    .header__top-info{
+
+    }
 }
