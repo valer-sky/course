@@ -310,7 +310,7 @@ font-weight: 700;
 #slides .image{
   width:500%;
   line-height:0;
-  margin-top: 10px;
+  margin-top: 10px 0 0 0;
   
 }
 #overflow{
@@ -331,10 +331,13 @@ font-weight: 700;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  color: grey;
   }
 
 .overflow__2 p {
   text-align: center;
+  color:gray;
+  margin-bottom: 20px;
   
  
 }
