@@ -295,31 +295,60 @@ font-weight: 700;
   border: none;
   min-height: 200px;
   position: relative;
-  text-align: center
+  text-align: center;
   top: 0 10px;
   margin: 0 auto;
+ 
  
 }
 #slides article{
   width:20%;
   float: left;
+  
+
 }
 #slides .image{
   width:500%;
   line-height:0;
+  margin-top: 10px;
+  
 }
 #overflow{
   width: 100%;
   overflow: hidden;
+  
 
 }
+#overflow span{
+
+  font-size: 50px;
+  position: relative;
+  padding: 10px;
+ 
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  }
+
+.overflow__2 p {
+  text-align: center;
+  
+ 
+}
+
+
 article img{
   width:100%;
 }
+
+ 
+  
+
 #desktop:checked ~ #slider{
   max-width: 800px;
-  
- 
 }
 #switch1:checked ~ #controls label:nth-child(5),
 #switch2:checked ~ #controls label:nth-child(1),
@@ -328,10 +357,11 @@ article img{
 #switch5:checked ~ #controls label:nth-child(4){
   background: url('next.png') no-repeat;
   float: left;
-  margin: -68px 0 0 0px;
+  margin: 60px 0 0 0px;
   display:block;
   height: 68px;
   width:68px;
+  color: black;
   
 
 }
@@ -342,20 +372,22 @@ article img{
 #switch5:checked ~ #controls label:nth-child(1){
   background: url('prev.png');
   float: right;
-  margin: -68px 0px 0px 0;
+  margin: 60px 0px 0px 0;
   display:block;
   height: 68px;
   width:68px;
- 
+  
 }
 label a{
   cursor: pointer;
+  
 }
 .slider__all input{
   display:none;
 }
 #switch1:checked ~ #slides .image{
   margin-left: 0;
+  
 }
 #switch2:checked ~ #slides .image{
   margin-left: -100%;
@@ -373,6 +405,7 @@ label a{
   margin: -25% 0 0 0;
   width:100%;
   height:50px;
+  
 }
 #active label{
   border-radius: 10px;
@@ -380,14 +413,17 @@ label a{
   width: 15px;
   height:15px;
   background: #bbb;
+  
 }
 #active{
   margin:23% 0 0;
   text-align: center;
+  color: black;
 }
 #active label:hover{
   background: #76c8ff;
-  border-color: #777 !important;
+  border-color: black !important;
+  
 }
 #switch1:checked ~ #active label:nth-child(1),
 #switch2:checked ~ #active label:nth-child(2),
@@ -395,16 +431,18 @@ label a{
 #switch4:checked ~ #active label:nth-child(4),
 #switch5:checked ~ #active label:nth-child(5){
 background: #18a3dd;
-border-color:  #18a3dd !important;
+border-color:black; !important;
 }
 #slides .image{
   transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000)
 }
 #controls label:hover{
   opacity: 0.6;
+  color: black;
 }
 #controls label{
   transition:opacity 0.2s ease-in-out;
+  color: black;
 }
 
 
