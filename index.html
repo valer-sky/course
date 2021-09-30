@@ -1,47 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarla</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TARLA</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components/botton.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/first-section.css">
+  <link rel="stylesheet" href="css/howitWorks.css">
+
+ 
+  
+      
 
 </head>
 <body>
-    <header> 
-        <div class="header wrapper">
-        <div class="header__logo">
-          <img src="images/logo.svg" alt="TARLA">
+  <header class="header wrapper">
+    <nav class="header__left">
+      <div class="header__logo">
+        <img src="images/logo.svg" alt="TARLA">
+      </div>
+      <ul class="header__menu">
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Who is tarla?</a></li>
+      </ul>
+    </nav>
+    <div class="header__cart">
+      <div class="header__card-user">
+        <i class="far fa-user"></i>
+        <span>Log in</span>
+      </div>
+      <div class="header__card-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Cart</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="first-section">
+      <div class="first-section__content wrapper">
+        <div class="first-section__info">
+          <div class="title">Fresh <br> pastry kits</div>
+          <p class="description">Bringing the smells and tastes of your favourite patisserie to your home. Our kits have everything you need to easily make killer pastries every time. We’ve done the tricky bits so all you need to do is roll, proof and bake!</p>
+          <div class="button button-black">Shop pastry kits</div>
         </div>
-        <div class="header__menu">
-          <ul type="none">
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Who is tarla?</a></li>
-          </ul>
+        <div class="first-section__image">
+          <img src="images/first-section.jpg" alt="tarla-section"/>
+          <div class="first-section__image-navigate">
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+          </div>
         </div>
-          <div class="header__cart">
-            <div class="header__card-user">
-              <span>Log in</span>
+      </div>
+    </section>
+
+    <!--How its work-->
+    <section class="howitWorks">
+        <div class="howitWorks__items wrapper">
+            <div class="howitWorks__items">
+            <div class="howitWorks__items-img">
+                <img src="images/howitswork/1.png" alt="">
             </div>
-            <div class="header__card-cart">
-              <span>Cart</span>
-            </div>
-            <div class="header__card-card">
-          <div class="header__card-userim">
-              <img src="images/user.svg" alt="user">
-          </div>
-          <div class="header__card-bag">
-              <img src="images/bag.svg">
-          </div>
-          </div>
-          </div>
-          </nav>
+            <span class="howitWorks__items-title">Choose your fave</span>
+            <p class="howitWorks__items-description">This sounds easier than it's going to be. We've got all the classics on here, so now it's over to you.</p>
         </div>
-       
-      </header>
+        <div class="howitWorks__items">
+            <div class="howitWorks__items-img">
+                <img src="images/howitswork/2.png" alt="">
+            </div>
+            <span class="howitWorks__items-title">Ding dong</span>
+            <p class="howitWorks__items-description">Next you'll get a beautiful little package delivered to your door, on a day and time slot that you choose.</p>
+        </div>
+        <div class="howitWorks__items">
+            <div class="howitWorks__items-img">
+                <img src="images/howitswork/3.png" alt="">
+            </div>
+            <span class="howitWorks__items-title">Get baked</span>
+            <p class="howitWorks__items-description">Take your fresh pastry sheet and fillings, learn our pro techniques then never buy a stale pastry ever again.</p>
+        </div>
+        <div class="howitWorks__items">
+            <div class="howitWorks__items-img">
+                <img src="images/howitswork/4.png" alt="">
+            </div>
+            <span class="howitWorks__items-title">Take the credit</span>
+            <p class="howitWorks__items-description">It was all you, nudge-nudge wink-wink. We're just happy to be your loyal side-kick..</p>
+        </div>
+        </div>
+        <div class="howitWorks__button">
+            <div class="button">Shop pastry kits</div>
+        </div>
+    </section>
+
+  </main>
 </body>
 </html>

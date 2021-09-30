@@ -6,6 +6,8 @@
   --font-roboto: 'Roboto', sans-serif;
   --accent: #0126DE;
   --gray: #F5EDE7;
+  --text: #000;
+  --orange: #FFC3A0;
 
   --xxl: 1320px;
   --xl: 1140px;
@@ -16,7 +18,7 @@
 
 body {
   font-family: var(--font-dm-sans);
-  color: #000;
+  color: var(--text);
   background-color: var(--gray);
 }
 .wrapper {
@@ -48,8 +50,6 @@ body {
     max-width: 100%;
   }
 }
-
-
 
 
 
