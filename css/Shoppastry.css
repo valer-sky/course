@@ -1,0 +1,28 @@
+.Shoppastry{
+Width:1440px;
+Height:1497px;
+}
+.Shoppastry__title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    line-height: 35px;
+}
+.Shoppastry__items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+
+}
+.Shoppastry__item-img{
+height: 453px;
+width: 453px;
+
+border-radius: 20px;
+margin-top: 40px;
+
+}
