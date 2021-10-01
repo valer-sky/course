@@ -1,350 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Айфонсервис | Техника Apple </title>
-    <meta name="description" content="Интернет магазин техники Apple">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="reset.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TARLA</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components/botton.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/first-section.css">
+  <link rel="stylesheet" href="css/howitWorks.css">
 
-
-    
-    
-    <link rel="stylesheet" href="style.css">
-
+ 
+  
+      
 
 </head>
-
 <body>
-  <header>
-    <div class="header">
-      <div class="headder-wrapper">
-        <div class="header__top wrapper">
-          <div class="header__top-logo">
-            <a href="/">Айфоносервис | <span>Техника Apple</span></a>
-          </div>
-          <div class="header__top-search">
-            <input class="header__top-input" type="text" name='term' placeholder="Поиск по сайту...">
-          </div>
-          <div class="header__top-info">
-            <div class="accaunt">
-              <i class="fas fa-user"></i><span>Мой аккаунт</span>
-            </div>
-            <div class="phone">
-              <a href="tell: +375299999999">+375 (29) 783-76-45</a>
-            </div>
-          </div>
-        </div>
+  <header class="header wrapper">
+    <nav class="header__left">
+      <div class="header__logo">
+        <img src="images/logo.svg" alt="TARLA">
       </div>
-      <div class="header__bottom wrapper">
-        <nav>
-          <ul class="header__bottom-menu">
-            <li><a href="#" class="active">Гарантия</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Ремонт</a></li>
-            <li><a href="#">Скидки</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
-        <div class="header__cart">
-          <div>
-            <i class="fas fa-cart-plus"></i>
-            Товаров <span id='count_cart'>0</span>
-          </div>
-          <div>(<span id='prise_cart'>0</span> руб.)</div>
-        </div>
+      <ul class="header__menu">
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Who is tarla?</a></li>
+      </ul>
+    </nav>
+    <div class="header__cart">
+      <div class="header__card-user">
+        <i class="far fa-user"></i>
+        <span>Log in</span>
+      </div>
+      <div class="header__card-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Cart</span>
       </div>
     </div>
   </header>
-    
-    <main class="main wrapper">
-      <div class="main__left">
-        <aside class="sidebar">
-          <ul class="sidebar__list">
-            <li><a href="#">Apple iPhone 6s</a>
-              <ul> 
-               <li><a href="#">&ndash;16 Gb</a></li> 
-               <li><a href="#">&ndash;64Gb</a></li> 
-               <li><a href="#" class="brd">&ndash;128Gb</a></li> 
-              </ul> 
-             </li> 
-             
-            <li>
-              <a href="#">Apple iPhone 6s Plus</a>
-              <ul>
-                <li><a href="#">&ndash;16 Gb</a></li> 
-                 <li><a href="#">&ndash;64Gb</a></li> 
-                 <li><a href="#">&ndash;128Gb</a></li>
-              </ul>
-            </li>
-            
-            <li><a href="#">Apple iPhone 6s</a></li>
-            <li><a href="#">Apple iPhone 6</a></li>
-            <li><a href="#">Apple iPhone 6 Plus</a></li>
-            <li><a href="#">Apple iPhone 5s</a></li>
-            <li><a href="#">Apple Watch</a></li>
-            <li><a href="#">Скидки</a></li>
-          </ul>  
-        </aside>
-  
-        <div class="info__active">
-          <div class="info__icon-active"><i class="fas fa-star"></i>
-           
+  <main>
+    <section class="first-section">
+      <div class="first-section__content wrapper">
+        <div class="first-section__info">
+          <div class="title">Fresh <br> pastry kits</div>
+          <p class="description">Bringing the smells and tastes of your favourite patisserie to your home. Our kits have everything you need to easily make killer pastries every time. We’ve done the tricky bits so all you need to do is roll, proof and bake!</p>
+          <div class="button button-black">Shop pastry kits</div>
+        </div>
+        <div class="first-section__image">
+          <img src="images/first-section.jpg" alt="tarla-section"/>
+          <div class="first-section__image-navigate">
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
           </div>
-          <div class="info__text">
-            <div class="info__text-title">
-              Гарантия качества
-            </div>
-            <div class="info__text-description">
-              Возможность полной проверки товара до оплаты. Гарантия один год. Обслуживание в официальном сервис центре Apple.
-            </div>
-          </div>
-        </div><!-- info end -->
-  
-        <div class="info__service">
-          <div class="info__icon-service"><i class="fal fa-snowman"></i>
-            
-          </div>
-          <div class="info__text">
-            <div class="info__text-title-service">
-              Отличный сервис<br>
-            </div>
-            <div class="info__text-description">
-              У нас самые проффесиональные консультации по работе с техникой Apple и сотни довольных покупателей качественным обслуживанием.
-            </div>
-          </div>
-        </div><!-- info end -->
-  
-        <div class="info__prise">
-          <div class="info__icon-prise"><i class="far fa-ruble-sign"></i>
-            
-          </div>
-          <div class="info__text">
-            <div class="info__text-title-prise">
-              Привлекательные цены <br>
-            </div>
-            <div class="info__text-description">
-              Не смотря на все наши приимущества наши цены остаются низкими.
-            </div>
-          </div>
-        </div><!-- info end -->
-        <div class="info__delivery">
-          <div class="info__icon-delivery"><i class="fas fa-truck"></i>
-            
-          </div>
-          <div class="info__text">
-            <div class="info__text-title-delivery">
-              Гарантия доставки
-            </div>
-            <div class="info__text-description">
-              Мы бережно упаковываем и отрправляем вам товар, контролируя  доставку каждого продукта индивидуально.
-            </div>
-          </div>
-        </div><!-- info end -->
-  
+        </div>
       </div>
-      
-      <div class="main__right">
+    </section>
 
-        
-          <div class="slider__all"><input checked type="radio" name="respond" id="desktop">
-            <article id="slider">
-              <input checked type="radio" name="slider" id="switch1">
-              <input  type="radio" name="slider" id="switch2">
-              <input  type="radio" name="slider" id="switch3">
-              <input  type="radio" name="slider" id="switch4">
-              <input  type="radio" name="slider" id="switch5">
-
-              <div id="slides">
-                <div id="overflow"><span>iPhone 6</span>
-                  <div class="overflow__2"><p>Супертонкое решение</p></div>
-                  <div class="image">
-                    <article><img src="1.jpg"></article>
-                    <article><img src="2.jpg"></article>
-                    <article><img src="3.jpg"></article>
-                    <article><img src="4.jpg"></article>
-                    <article><img src="5.jpg"></article>
-
-                  </div>
-                </div>
-              </div>
-              <div id="controls">
-                <label for="switch1"></label>
-                <label for="switch2"></label>
-                <label for="switch3"></label>
-                <label for="switch4"></label>
-                <label for="switch5"></label>
-              </div>
-              <div id="active">
-                <label for="switch1"></label>
-                <label for="switch2"></label>
-                <label for="switch3"></label>
-                <label for="switch4"></label>
-                <label for="switch5"></label>
-
-              </div>
-            </article>
-
+    <!--How its work-->
+    <section class="howItWorks">
+        <div class="howItWorks__title"><h2>How it works</h2></div>
+        <div class="howItWorks__items wrapper">
+          <div class="howItWorks__item">
+            <div class="howItWorks__item-img">
+              <img src="images/howItWorks/1.png" alt="Choose your fave">
+            </div>
+            <span class="howItWorks__item-title">
+              Choose your fave
+            </span>
+            <p class="howItWorks__item-description">
+              This sounds easier than it's going to be. We've got all the classics on here, so now it's over to you.
+            </p>
           </div>
-        
-        <h2 class="main__right-title">Лучшие товары</h2>
-        <section class="card-list">
-            <div class="card">
-                <div class="card_img"><img src="image/iphone6s-rose.jpg" alt=""></div>
-                <div class="card_title">
-                    iPhone 6s 128 Gb Gold
-                </div>
-                <div class="card_prise">
-                    64990 руб.
-                </div>
-                <div class="card_btn">
-                    <div><span>Добавить в корзину</span></div>
-                    <div><span>Купить в один клик</span></div>
-                </div>
+          <div class="howItWorks__item">
+            <div class="howItWorks__item-img">
+              <img src="images/howItWorks/2.png" alt="Ding dong">
             </div>
-            <div class="card">
-                <div class="card_img"><img src="image/iphone6s-silver.jpg" alt=""></div>
-                <div class="card_title">
-                    iPhone 6s 128 Gb Silver
-                </div>
-                <div class="card_prise">
-                    64990 руб.
-                </div>
-                <div class="card_btn">
-                    <div><span>Добавить в корзину</span></div>
-                    <div><span>Купить в один клик</span></div>
-                </div>
+            <span class="howItWorks__item-title">
+              Ding dong
+            </span>
+            <p class="howItWorks__item-description">
+              Next you'll get a beautiful little package delivered to your door, on a day and time slot that you choose.
+            </p>
+          </div>
+          <div class="howItWorks__item">
+            <div class="howItWorks__item-img">
+              <img src="images/howItWorks/3.png" alt="Ding dong">
             </div>
-            <div class="card">
-                <div class="card_img"><img src="image/iphone6s-gray.jpg" alt=""></div>
-                <div class="card_title">
-                    iPhone 128 Gb Space
-                </div>
-                <div class="card_prise">
-                    64990 руб.
-                </div>
-                <div class="card_btn">
-                    <div><span>Добавить в корзину</span></div>
-                    <div><span>Купить в один клик</span></div>
-                </div>
+            <span class="howItWorks__item-title">
+              Get baked
+            </span>
+            <p class="howItWorks__item-description">
+              Take your fresh pastry sheet and fillings, learn our pro techniques then never buy a stale pastry ever again.
+            </p>
+          </div>
+          <div class="howItWorks__item">
+            <div class="howItWorks__item-img">
+              <img src="images/howItWorks/4.png" alt="Take the credit">
             </div>
-            <div class="card">
-                <div class="card_img"><img src="image/iphone6-gold.jpg" alt=""></div>
-                <div class="card_title">
-                    iPhone 6 16 Gb Gold
-                </div>
-                <div class="card_prise">
-                    39990 руб.
-                </div>
-                <div class="card_btn">
-                    <div><span>Добавить в корзину</span></div>
-                    <div><span>Купить в один клик</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img"><img src="image/iphone6-gray.jpg" alt=""></div>
-                <div class="card_title">
-                    iPhone 6 16 Gb Space
-                </div>
-                <div class="card_prise">
-                    39990 руб.
-                </div>
-                <div class="card_btn">
-                    <div><span>Добавить в корзину</span></div>
-                    <div><span>Купить в один клик</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img"><img src="image/iphone6-silver.jpg" alt=""></div>
-                <div class="card_title">
-                    iPhone 6 16 Gb Silver
-                </div>
-                <div class="card_prise">
-                    39990 руб.
-                </div>
-                <div class="card_btn">
-                    <div><span>Добавить в корзину</span></div>
-                    <div><span>Купить в один клик</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img"><img src="images/products/iPhone5S/iphone5s-gray.jpg" alt=""></div>
-                <div class="card_title">
-                    iPhone 5s 16 Gb Space
-                </div>
-                <div class="card_prise">
-                    19550 руб.
-                </div>
-                <div class="card_btn">
-                    <div><span>Добавить в корзину</span></div>
-                    <div><span>Купить в один клик</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img"><img src="images/products/iPhone5S/iphone5s-gold.jpg" alt=""></div>
-                <div class="card_title">
-                    iPhone 5s 16 Gb Gold
-                </div>
-                <div class="card_prise">
-                  195500 руб.
-                </div>
-                <div class="card_btn">
-                    <div><span>Добавить в корзину</span></div>
-                    <div><span>Купить в один клик</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_img"><img src="images/products/iPhone5S/iphone5s-silver.jpg" alt=""></div>
-                <div class="card_title">
-                    iPhone 5s 32 Gb Silver
-                </div>
-                <div class="card_prise">
-                  19700 руб.
-                </div>
-                <div class="card_btn">
-                    <div><span>Добавить в корзину</span></div>
-                    <div><span>Купить в один клик</span></div>
-                </div>
-            </div>
-                
-        </section>
+            <span class="howItWorks__item-title">
+              Take the credit
+            </span>
+            <p class="howItWorks__item-description">
+              It was all you, nudge-nudge wink-wink. We're just happy to be your loyal side-kick.
+            </p>
+          </div>
+        </div>
+        <div class="howItWorks__button">
+          <div class="button">Shop pastry kits</div>
+        </div>
+      </section>
 
-      </div>
-      
-      
-      <div class="card-list">
-
-      </div>
-    
-
-     
-      
-
-      
-    </main>
-  
-  
-    <footer>
-      <div class="footer-top"><span>Айфоносервис | Техника Apple</span>
-       <div class="info__phone2">
-          <a href="tel:+7490999999">+7 (490) 99-99-99</a>
-         </div>
-    <div class="wrapper2">
-      <nav class="menu2">
-        <ul>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Ремонт</a></li>
-          <li><a href="#">Скидки</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-    </footer>
-    <!-- <div class="footer"></div> -->
-  </body>
-  
-  </html>
+  </main>
+</body>
+</html>
