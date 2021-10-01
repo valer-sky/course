@@ -26,5 +26,7 @@
     background-color: darken(var(--accent), 5%)
   }
   .button-black{
-      
+    border: 1px solid var(--text);
+    color: var(--text);
+
   }
