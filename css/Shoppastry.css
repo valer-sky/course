@@ -1,28 +1,56 @@
 .Shoppastry{
 Width:1440px;
-Height:1497px;
+Height: 673px;
+width: 100%;
+
 }
 .Shoppastry__title{
-    width: 100%;
+    
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 35px;
 }
 .Shoppastry__items{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-
+    Width:1440px;
+    Height:1497px; 
+   
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:space-around;
+  align-content:flex-start;
+ 
 
 }
 .Shoppastry__item-img{
-height: 453px;
-width: 453px;
-
+height: 420px;
+width: 420px;
 border-radius: 20px;
-margin-top: 40px;
+
+padding: 25px;
+}
+.Shoppastry__item-title{
+    display: flex;
+    align-items:flex-start;
+    margin-left: 25px;
+    font-size:  27px;
+    font:'Roboto';
+}
+.Shoppastry__item-description{
+    align-items:flex-start;
+    margin-left: 25px;
+    font-size:  20px;
+    font:'DM Sans';
+}
+.Shoppastry__button{
+    margin-left: 25px;
+}
+.picture__item{
+Width:1440px;
+Height:960px;
+margin-top: -250px;
+margin-left:50px;
 
 }
