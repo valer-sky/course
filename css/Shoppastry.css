@@ -54,3 +54,34 @@ margin-top: -250px;
 margin-left:50px;
 
 }
+@media (max-width: 992px){
+    .picture__item{
+        width: 100%; 
+        margin-top: 2100px;
+       }
+    }
+
+@media (max-width: 768px) {
+ .Shoppastry__title{
+    margin-top: 170px;
+        font-size: 20px;
+      line-height: 55px;
+    }
+ .Shoppastry__item{
+     margin-top: 0px;
+     margin-left: 25px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    }
+  .picture__item{
+     width: 100%; 
+     margin-top: 2100px;
+    }
+}
+@media (max-width: 576px) {
+    .Shoppastry__item{
+        display: flex;
+     flex-direction: column;
+    }
+}
