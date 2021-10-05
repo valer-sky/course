@@ -3,9 +3,8 @@
 }
 .threepicture__item{
   border: 1px solid black;
-  width: 1440px;
-  height:662px;
-  font-size: 18px;
+ 
+ 
   
 }
 .threepicture__item-img{
@@ -14,8 +13,13 @@
 border-radius: 20px;
 }
 .threepicture__item-title{
+    font-size: 20px;
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
 
-
+line-height: 69px;
+    
 }
 .threepicture__item-description{
     margin-top: 15px;
