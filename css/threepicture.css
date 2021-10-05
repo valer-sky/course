@@ -1,0 +1,25 @@
+.threepicture{
+    width: 100%;
+}
+.threepicture__item{
+  border: 1px solid black;
+  width: 1440px;
+  height:662px;
+  font-size: 18px;
+  
+}
+.threepicture__item-img{
+    height: 410px;
+ width: 272px;
+border-radius: 20px;
+}
+.threepicture__item-title{
+
+
+}
+.threepicture__item-description{
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}

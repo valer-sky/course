@@ -47,19 +47,14 @@ padding: 25px;
 .Shoppastry__button{
     margin-left: 25px;
 }
-.picture__item{
-Width:1440px;
-Height:960px;
-margin-top: -250px;
-margin-left:50px;
+
+
+
+
+@media (max-width: 992px){
 
 }
-@media (max-width: 992px){
-    .picture__item{
-        width: 100%; 
-        margin-top: 2100px;
-       }
-    }
+   
 
 @media (max-width: 768px) {
  .Shoppastry__title{
@@ -74,10 +69,8 @@ margin-left:50px;
      flex-direction: column;
      align-items: center;
     }
-  .picture__item{
-     width: 100%; 
-     margin-top: 2100px;
-    }
+ 
+    
 }
 @media (max-width: 576px) {
     .Shoppastry__item{
