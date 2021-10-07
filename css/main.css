@@ -20,6 +20,7 @@ body {
   font-family: var(--font-dm-sans);
   color: var(--text);
   background-color: var(--gray);
+  overflow-x: hidden;
 }
 .wrapper {
   max-width: var(--xxl);
