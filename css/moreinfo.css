@@ -1,6 +1,8 @@
 .moreinfo{
     width: 100%;
     min-height: 982px;
+    padding: 0px 15px;
+    margin: 0px auto;
 }
 .moreinfo .wrapper{
     display: flex;
@@ -100,11 +102,13 @@
     margin: 0px 16px 16px 16px;
 }
 .botton-star img{
-    position: relative;
+    position: absolute;
     margin-bottom: -195px;
-     transform:translateX(-70%);
+     transform:translateX(50%);
     z-index: -1 ;
+    object-position: bottom;
 }
+
 
 
 
