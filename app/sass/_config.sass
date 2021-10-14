@@ -1,5 +1,5 @@
 // USER VARIABLES SECTION
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 $accent: orange // Accent Color
 $fontsize: 16px // Body Font Size
 $textcolor: rgba(44, 44, 44, 1)// Text Color
@@ -7,9 +7,11 @@ $lineheight: 26px // Document Line Height
 $userfont: Noto Serif, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
-// Bootstrap compatible gutter variable => $gutter
-$grid-gutter-width: 30px
-$gutter: $grid-gutter-width
+$xxl: 1320px
+$xl: 1140px
+$lg: 960px
+$md: 720px
+$sm: 540px
 
 // IMPORT SECTION
 
@@ -18,17 +20,8 @@ $gutter: $grid-gutter-width
 
 // FONTS LOAD SECTION
 
-@mixin font($fname, $fstyle, $fweight, $furl)
-	@font-face
-		font-family: $fname
-		font-style: $fstyle
-		font-weight: $fweight
-		src: url($furl) format('woff2')
 
-@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
 
 // GENERAL DOCUMENT STYLES
 
@@ -59,8 +52,30 @@ a
 	text-decoration: none
 .wrapper
 	min-height: 100%
+	width: 100%
 	
 
-._container
-	max-width: 1400px
-	margin: 0px auto
+
+.wrapper
+  max-width: $xxl
+  margin: 0 auto
+
+@media (max-width: 1400px)
+  .wrapper
+    max-width: $xl
+
+@media (max-width: 1200px)
+  .wrapper
+    max-width: $lg
+
+@media (max-width: 992px)
+  .wrapper
+    max-width: $md
+
+@media (max-width: 768px)
+  .wrapper
+    max-width: $sm
+
+@media (max-width: 576px)
+  .wrapper
+    max-width: 100%
