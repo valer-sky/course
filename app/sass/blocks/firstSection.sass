@@ -7,6 +7,9 @@
     
 
     
+    
+
+    
 
 
 .firstSection__image-navigate
@@ -24,7 +27,8 @@
 .firstSection__slider-line
     width: 130px
     height: 0px
-    border: 1px solid rgba(255, 113, 91, 1)    
+    border: 1px solid rgba(255, 113, 91, 1)
+    background-color: rgba(255, 113, 91, 1)   
     display: flex
     flex-direction: row
     margin-left: 35px
@@ -39,6 +43,8 @@
     p
         font-size: 16px
         line-height: 19px
+        margin-bottom: 20px
+        color: rgba(167, 153, 151, 1)
     select
         color: rgba(255, 113, 91, 1)
 
@@ -52,12 +58,47 @@
 
 .firstSection__slider-info
 
-    border: 1px solid
+    
     display: flex
     flex-direction: row
-    width: 750px
-    height: 154px
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
+    width: 925px
+    height: 120px
+    justify-content: space-around
+    flex-wrap: wrap
+    align-items: center
+    background-color: #FFFFFF
+    box-shadow: 0px 10px 30px 5px rgba(219, 200, 197, 0.2)
+    margin-bottom: px
     
+
+.firstSection__conteiner
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    height: 30px
+    align-items: flex-end
+
+@media (max-width: 1400px)
+    .firstSection__image-navigate
+        display: flex
+        flex-direction: row 
+
+
+@media (max-width: 992px)
+	.firstSection__image-navigate
+    display: flex
+    flex-direction: row          
+        
+    .firstSection__info-button
+        button
+            margin-top: 30px
+            width: 100px
+            height: 32px
+
+        
+        
+
+
+    
+   
