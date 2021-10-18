@@ -1,0 +1,95 @@
+// USER VARIABLES SECTION
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: rgba(44, 44, 44, 1)// Text Color
+$lineheight: 26px // Document Line Height
+$userfont: Noto Serif, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+$bg-color_1:  #2C2C2C
+$bg-color_2:   rgba(167, 153, 151, 1)
+
+$bg-color_3:  #F7F7F7
+
+$xxl: 1320px
+$xl: 1140px
+$lg: 960px
+$md: 720px
+$sm: 540px
+
+// IMPORT SECTION
+
+@import 'reset.scss'
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+a
+	text-decoration: none
+	color: rgba(255, 255, 255, 1)
+	
+
+button
+        color: rgba(255, 255, 255, 1)
+        background-color: rgba(255, 113, 91, 1)
+        width: 195px
+        height: 64px
+        border: 0px
+.wrapper
+	min-height: 100%
+	width: 100%
+	
+
+
+.wrapper
+	max-width: $xxl
+	margin: 0 auto
+
+@media (max-width: 1400px)
+	.wrapper
+		max-width: $xl
+
+@media (max-width: 1200px)
+	.wrapper
+		max-width: $lg
+
+@media (max-width: 992px)
+	.wrapper
+		max-width: $md
+
+@media (max-width: 768px)
+	.wrapper
+		max-width: $sm
+
+@media (max-width: 576px)
+	.wrapper
+		max-width: 100%
