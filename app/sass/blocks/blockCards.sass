@@ -1,8 +1,10 @@
 .blockCards-block
     display: flex
     flex-direction: column
+    flex-item-wrap: wrap
+    
     align-content: center
-    justify-content: space-around
+    justify-content: space-evenly
     align-items: center
     background-color: #F8F8F8
     margin-top: 100px
@@ -12,7 +14,7 @@
     &:hover
         background-color: #FFFFFF
         box-shadow: 0px 10px 10px 5px
-        rgba(187, 185, 177, 0.479)
+        rgba(247, 247, 247, 0.904)
         
 
 
@@ -21,6 +23,9 @@
     
     width: 128px
     height: 128px
+    
+    
+
 
 .blockCards-title
     width: 235px
@@ -48,5 +53,17 @@
     justify-content: space-evenly
     align-items: center
     align-content: flex-end
+
+@media (max-width: 576px)
+    .blockCards-block
+        display: flex
+        flex: column
+        display: block
+    .blockCards-block
+        display: flex
+        flex-direction: column
+        align-content: center
+        align-items: center
+		
 
 

@@ -73,12 +73,31 @@
 .header__card-user
     margin-right: 15px
 
-@media (max-width: 992px)
-    .header__menu
-        ul
+@media (max-width: 1200px)
+    .header__header
         display: flex
         flex-direction: row
-        justify-content: flex-end 
+        flex-wrap: nowrap
+        justify-content: space-evenly
+    .header__card
+        align-items: center
+        align-content: center
+    
+        
+@media (max-width: 992px)
+    .header__card
+        align-items: center
+        flex-wrap: nowrap
+        margin-right: 150px
+@media (max-width: 768px)
+	    .header__logo
+            display: none
+@media (max-width: 576px)
+	.header__header
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+
         
 
 
