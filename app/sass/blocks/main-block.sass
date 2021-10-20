@@ -32,12 +32,108 @@
     line-weight: 500px
 
 .main-block__button
-    button
-        color: rgba(255, 255, 255, 1)
+    font-family: Noto Serif
+    text-decoration: none
+    position: relative
+    display: inline-block
+
+.main-block__button
+    &:before, &:after
+        content: ''   
+        position: absolute
+        width: 100px
+        height: 100px
+        border: 2px solid rgba(255, 113, 91, 1)
+        top: -15px
+        left: 50%
+        z-index: 1
+        transition: all 0.8s ease 0s
+        margin-left: -40px
+.main-block__button
+    &:before
+        animation: rotate 20s infinite linear
+.main-block__button
+    &:after
+        animation: rotate 25s infinite linear
+
+        
+    
+    
+.button__text
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    transition: all 1s ease 0s
+    top: 0
+    overview: hidden
+        
+    color: rgba(255, 255, 255, 1)
+    background-color: rgba(255, 113, 91, 1)
+    width: 195px
+    height: 64px
+    border: 0px
+.button__text
+    &:before,&:after 
+        content: ''   
+        position: absolute
+        width: 50%
+        height: 100%
         background-color: rgba(255, 113, 91, 1)
-        width: 195px
-        height: 64px
-        border: 0px
+        transition: all 0.8s ease 0s
+.button__text
+    &:before
+        left: 0
+        z-index: 2
+.button__text
+    &:after 
+        right: 0
+.button__text
+    span
+        position: relative
+        z-index: 2
+.main-block__button
+    &:hover:before, &:hover:after
+        left: 100%
+        opacity: 0
+.main-block__button
+    &:hover
+        .button__text
+            top: -10
+            color: #fff
+            transition: all 0.5s ease 0.2s
+            box-shadow: 0 5px 0px 0 #0c5b52
+.main-block__button
+    &:hover
+        .button__text
+            &:before,&:after
+                background-color: green
+.main-block__button
+    &:hover
+        .button__text
+            &:before
+                width: 100%
+.main-block__button
+    &:active
+        .button__text
+            top: -7px
+            transition: all 0.1s ease 0s
+            box-shadow: 0 2px 0px 0 #0c5b52
+
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+    
+        
+
+
+
+
+
+
     a 
         font-size: 18px
         line-height: 25px

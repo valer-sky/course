@@ -51,6 +51,9 @@
         align-items: center
     li
         margin-right: 30px
+        display: inline
+        list-style: none
+        padding: 15px
     li not(:last-child)
     
     a   
@@ -99,6 +102,8 @@
         flex-direction: row
         flex-wrap: wrap
         justify-content: space-around
+        li
+            padding: 5px
     .header__card
         align-items: center
         flex-wrap: wrap
@@ -109,8 +114,11 @@
         lex-wrap: nowrap
         justify-content: space-evenly
 @media (max-width: 768px)
-	    .header__logo
+        .header__logo
             display: none
+        .header__header
+            flex-direction: column
+
 @media (max-width: 576px)
    
     .header__header
