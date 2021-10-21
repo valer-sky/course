@@ -28,8 +28,9 @@ goShop ('Артем')
 goShop ('Антон')
 goShop ('Андрей')
 console.log(document);
+
 const mainBlockButton = document.querySelector('.main-block__button');
 function showLog(alert){
     console.log(main-block__button);
 }
- confirm('alert', showLog);
+ alert('alert', showLog);
