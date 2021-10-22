@@ -33,4 +33,4 @@ const mainBlockButton = document.querySelector('.main-block__button');
 function showLog(alert){
     console.log(main-block__button);
 }
- alert('alert', showLog);
+('alert', showLog);
