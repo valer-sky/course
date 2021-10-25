@@ -34,3 +34,35 @@ function showLog(alert){
     console.log(main-block__button);
 }
 ('alert', showLog);
+const firstName = 'Valery' 
+//const age = 37
+//const isTeacher = 'Music'
+
+//onsole.log(name, age, isTeacher)
+//console.log('Имя человека' + firstName + 'возраст' + age + 'Он учитель' + isTeacher)
+//console.log(age .toString)
+//const lastName = prompt('Введите фамилию')
+//alert(firstName + ' ' + lastName)
+//Операторы
+let currentYear = 2022
+const birthYear = 1984
+//const age = currentYear * birthYear
+//console.log(age)
+const a = 10
+const b = 5
+console.log (a + b)
+console.log(a - b)
+console.log(a* b)
+console.log(a/b)
+console.log(++currentYear)
+console.log(currentYear)
+console.log(--currentYear)
+//Типы данных
+const isTeacher = true
+const dName =' Val'
+const age = 35
+let x
+console.log(typeof isTeacher)
+console.log(typeof dName)
+console.log(typeof age)
+console.log(typeof x)
