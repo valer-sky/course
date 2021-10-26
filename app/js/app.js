@@ -66,3 +66,9 @@ console.log(typeof isTeacher)
 console.log(typeof dName)
 console.log(typeof age)
 console.log(typeof x)
+const output = `
+<div>This is div</div>
+<p>This is o</p>`
+console.log(output)
+const arrow = name => console.log('Привет-', name)
+arrow('Valery')
