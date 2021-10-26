@@ -51,6 +51,9 @@
         align-items: center
     li
         margin-right: 30px
+        display: inline
+        list-style: none
+        padding: 15px
     li not(:last-child)
     
     a   
@@ -68,7 +71,14 @@
     align-items: center
 
 .header__card-user
-    margin-right: 15px
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    p
+        margin: 0px 20px
+
 
 @media (max-width: 1200px)
     .header__header
@@ -76,24 +86,48 @@
         flex-direction: row
         flex-wrap: nowrap
         justify-content: space-evenly
+        
+    .header__card-user
+        display: flex
+        flex-direction: row
+
     .header__card
         align-items: center
         align-content: center
     
         
 @media (max-width: 992px)
+    .header__header
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
+        li
+            padding: 5px
     .header__card
         align-items: center
-        flex-wrap: nowrap
-        margin-right: 150px
-@media (max-width: 768px)
-	    .header__logo
-            display: none
-@media (max-width: 576px)
-	.header__header
-        display: flex
         flex-wrap: wrap
-        flex-direction: column
+        margin-right: 150px
+    .header__card-user
+        display: flex
+        flex-direction: row
+        lex-wrap: nowrap
+        justify-content: space-evenly
+@media (max-width: 768px)
+        .header__logo
+            display: none
+        .header__header
+            flex-direction: column
+
+@media (max-width: 576px)
+   
+    .header__header
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+	
+       
 
         
 
