@@ -6,6 +6,7 @@
     line-height: 50px
     text-align: center
     color: #2C2C2C
+    width: 100%
     
 .info__block-prise
     display: flex
@@ -64,7 +65,7 @@
 .ChooseDestination__image1
     position: relative
     width: 320px
-    height: 450px
+    height: 510px
 
 .ChooseDestination__block
     display: flex
@@ -86,6 +87,83 @@
     img
     margin-right: 150px
     margin-bottom: 30px
+
+.ChooseDestination__btn
+    
+    a
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center
+    button
+        
+        color: rgba(255, 255, 255, 1)
+        background-color: rgba(255, 113, 91, 1)
+        width: 195px
+        height: 64px
+        border: 0px
+        margin-top: 25px
+        position: absolute
+        z-index: 1
+       
+        transform: translateX(-50%)
+
+@media (max-width: 1200px)
+    .ChooseDestination__another
+        display: none
+    .ChooseDestination__trungle
+        display: none
+    .ChooseDestination__block
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        justify-content: flex-start
+        margin: 0px 5px
+    .ChooseDestination__btn
+        margin-top: -80px
+       
+@media (max-width: 992px)
+    .ChooseDestination__block
+        display: flex
+        flex-direction: row 
+        flex-wrap: wrap
+        justify-content: center
+        margin: 0px auto
+    .ChooseDestination__btn
+        display: none
+
+        
+
+@media (max-width: 768px)
+    .ChooseDestination__block
+        display: flex
+        flex-basis: column
+@media (max-width: 576px)
+    .ChooseDestination__block-block
+        display: flex
+        flex-direction: column
+        flex-wrap: nowrap
+        align-items: center
+        align-content: center
+        margin-left: 40%
+    .ChooseDestination__title
+        display: block
+        margin-left: 30%
+        width: 100%
+
+        
+    
+        
+    
+    
+        
+
+
+
+
+
+
+
+    
 
 
 
