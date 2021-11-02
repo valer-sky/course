@@ -80,18 +80,45 @@
     flex-direction: row
     justify-content: flex-start
     margin-top: 100px
-
+@media (max-width: 1200px)
+    
+    .purpleblock
+        display: none
+    .TopDestinations__card-block
+        &:nth-child(2)
+        margin-left: 20px 
+        
+        
 @media (max-width: 992px)
     .purpleblock
         display: none
-
     .TopDestinations__item
         display: flex
         flex-direction: row
-        flex-wrap: wrap
-        justify-content: space-around
-        align-items: center
-        margin: 20px 20px 0px 20px
+        flex-wrap: nowrap
+        justify-content: center
+    .TopDestinations__card-block
+        margin-left: -130px
+        
+
+        
+    .TopDestinations__info-block
+        margin-left: 50%
+        
+    .TopDestinations__card-block
+        width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        margin-left: 25%
+    .TopDestinations__city-block
+        margin-right: 20px
+        
+
+        
+
+
+    
 
 @media (max-width: 768px)
     .TopDestinations__item
@@ -101,12 +128,17 @@
         
         justify-content: space-around
         align-items: center
-    .blockCards-block
+    .TopDestinations__card-block
+        margin-left: 50%
         align-items: center
 
 @media (max-width: 576px)
-    .blockCards-block
-        align-items: center
+    .TopDestinations__info-block
+        margin-left: 100%
+    .TopDestinations__card-block
+        margin-left: 100%
+        margin-top: 30px
+        
     .TopDestinations__item
         display: flex
         flex-direction: row

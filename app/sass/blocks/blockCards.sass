@@ -64,18 +64,43 @@
     justify-content: space-evenly
     align-items: center
     align-content: flex-end
-
-@media (max-width: 576px)
-    .blockCards-block
-        
-        display: block
-    .blockCards-block
+@media (max-width: 1200px)
+    .blockCards-item 
         display: flex
-        flex-direction: column
-        align-content: center
-        align-items: center
-    .blockCards-item  
-        margin-left: 150px  
+        flex-direction: row
+        flex-wrap: nowrap
+        margin-left: 25%
+    .blockCards-block
+        margin-left: 30px
+
+
+@media (max-width: 992px)
+    .blockCards-item 
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        margin-left: 35%
+@media (max-width: 768px)
+    .blockCards-item 
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        margin-left: 75%
+    .blockCards-block
+        margin-left: px
+    
+
+        
+@media (max-width: 576px)
+    .blockCards-item 
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        margin-left: 100%
+    .blockCards-block
+        margin-bottom: -10px
+        
+    
 		
 
 

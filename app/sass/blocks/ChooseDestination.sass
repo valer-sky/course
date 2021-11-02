@@ -7,6 +7,11 @@
     text-align: center
     color: #2C2C2C
     width: 100%
+    img
+        position: absolute
+        z-index: -2
+        transform: translateY(-40%)
+        margin-left: 60%
     
 .info__block-prise
     display: flex
@@ -122,11 +127,15 @@
         margin-top: -80px
        
 @media (max-width: 992px)
+    .ChooseDestination__title
+        margin-left: 150px
+        img
+            display: none
     .ChooseDestination__block
         display: flex
         flex-direction: row 
         flex-wrap: wrap
-        justify-content: center
+        justify-content: flex-end
         margin: 0px auto
     .ChooseDestination__btn
         display: none
@@ -137,18 +146,21 @@
     .ChooseDestination__block
         display: flex
         flex-basis: column
+        justify-content: flex-start
+        margin-left: 200px
 @media (max-width: 576px)
     .ChooseDestination__block-block
         display: flex
         flex-direction: column
         flex-wrap: nowrap
+        justify-content: flex-end
         align-items: center
         align-content: center
         margin-left: 40%
     .ChooseDestination__title
         display: block
-        margin-left: 30%
-        width: 100%
+        margin-left: 500px
+        
 
         
     
