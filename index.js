@@ -64,7 +64,8 @@
 // function start() {
 //     numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) { /*проверяет на тру все значения , если все тру то выводит Сколько фильмов просмотрел*/
+//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) { 
+    /*проверяет на тру все значения , если все тру то выводит Сколько фильмов просмотрел*/
 //         numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 //     }
 // }
@@ -152,7 +153,59 @@
 //     });
 // }
 // }
+"use strict";
+// let number = 4.7;
+
+// console.log('string' * 9);
+
+// const persone = 'Valer';
+// const bool = true;
+
+// const obj = {
+//     name: "Valer",
+//     age: 37,
+//     isMarried: true
+// };
+// console.log(obj ['name']);
+
+// let arr = ['plum.png', 'orange.svg', 'aplee.jpg', 8, 46, {}, []];
+// console.log(arr[6]);
+
+// alert("Hello Valer!!!");
+// const result = confirm('Are you here?');
+// console.log(result);
+// const answer = +prompt("Вам  есть 18?", "");
+// console.log(typeof(answer + 10));
+// const answers = [];
+
+// answers[0] = prompt('Как ваше имя?', '');
+// answers[1] = prompt('Как ваша фамилия?', '');
+// answers[2] = prompt('Сколько вам лет?', '');
+
+// console.log(typeof(answers));
+// const user = 'Valery';
+// alert(`Привет, ${user}`);
 
 
+
+
+// первая пркактическая
+
+// const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", " ");
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+// const a = prompt('Один из последних просмотренных фильмов?'),
+//       b = +prompt('На сколько оцените его?', ""),
+//       c = prompt('Один из последних просмотренных фильмов?'),
+//       d = +prompt('На сколько оцените его?', "");
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = b;
+// console.log(personalMovieDB);
 
 
