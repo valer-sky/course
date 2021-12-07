@@ -200,12 +200,84 @@
 //     genres: [],
 //     privat: false
 // };
-// const a = prompt('Один из последних просмотренных фильмов?'),
-//       b = +prompt('На сколько оцените его?', ""),
-//       c = prompt('Один из последних просмотренных фильмов?'),
-//       d = +prompt('На сколько оцените его?', "");
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = b;
-// console.log(personalMovieDB);
 
+// const a = prompt('Один из последних просмотренных фильмов?'),
+//       b = +prompt('На сколько оцените его?', " "),
+//       c = prompt('Один из последних просмотренных фильмов?'),
+//     d = +prompt('На сколько оцените его?', " ");
+
+//     personalMovieDB.movies[a] = b;
+//     personalMovieDB.movies[c] = d;
+//     console.log(personalMovieDB);
+
+// Вторая практическая
+
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", " ");
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+
+    for (let i = 0; i < 2; i++){
+        const a = prompt('Один из последних просмотренных фильмов?'),
+          b = +prompt('На сколько оцените его?', " ");
+          
+        if (a != null && b != null &&  a != '' && b != ''  && a.str.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+    }  else {
+            console.log("Error");
+            i--;
+         
+    } 
+    
+    }
+        console.log(personalMovieDB);
+
+    
+        
+    
+      
+
+    
+
+
+//  условия
+
+// if (4 == 3) {
+//     console.log("Ok");
+// } else {
+//     console.log("erreor!");
+// }
+// const num = 50;
+
+// if (num < 49) {
+//     console.log('Error!');
+// } else if (num > 100) {
+//     console.log("Bad");
+// } else {
+//     console.log('Ok!');
+// }
+//    (num === 50) ? console.log('Ok') : console.log("Error");
+// const num = 50;
+//  switch (num) {
+//    case 49:
+//      console.log("Error");
+//     break;
+//    case 100:
+//       console.log("Error");
+//      break;
+//    case 52:
+//       console.log("ok");
+//      break;
+//    default:
+//      console.log('another time');
+//      break;
+// }
+     
 
