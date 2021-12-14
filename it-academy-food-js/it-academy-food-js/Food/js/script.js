@@ -10,26 +10,26 @@ window.addEventListener('DOMContentLoaded', function() {
   
     function toogleTab(index) {
       content.forEach((tab) => {
-        tab.classList.add('hide')
-        tab.classList.remove('show')
-      }) //скрываем все элементы
-      content[index].classList.remove('hide') //убираем класс каторый скрывает блок у элемента под номером index
-      content[index].classList.add('show')
+        tab.classList.add('hide');
+        tab.classList.remove('show');
+      });//скрываем все элементы
+      content[index].classList.remove('hide'); //убираем класс каторый скрывает блок у элемента под номером index
+      content[index].classList.add('show');
   
       tabItems.forEach((item) => {
-        item.classList.remove('tabheader__item_active')
-      })
+        item.classList.remove('tabheader__item_active');
+      });
   
-      tabItems[index].classList.add('tabheader__item_active')
+      tabItems[index].classList.add('tabheader__item_active');
     }
-    toogleTab(0)
+    toogleTab(0);
   
     navigation.addEventListener('click', (e) => {
       const target = e.target;
       if (target.classList.contains('tabheader__item')) {
-        toogleTab(Number(e.target.dataset.index))
+        toogleTab(Number(e.target.dataset.index));
       }
-    })
+    });
   
     // setTimeout(() => {
     //   console.log('setTimeout');
@@ -52,8 +52,8 @@ window.addEventListener('DOMContentLoaded', function() {
         s: dateNow.getSeconds(),
         mont: dateNow.getMonth() + 1,
         day: dateNow.getDay()
-      }
-      return `${obj.day}:${obj.mont}:${obj.y}`
-    }
+      };
+      return `${obj.day}:${obj.mont}:${obj.y}`;
+    };
     console.log(date());
   });
