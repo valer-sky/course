@@ -13,6 +13,7 @@
 5) Добавить нумерацию выведенных фильмов */
 
 'use strict';
+document.addEventListener('DOMContentLoaded', () => {
 
 const movieDB = {
     movies: [
@@ -24,12 +25,12 @@ const movieDB = {
     ]
 };
 
-const reklama = document.querySelectorAll('.promo__adv');
+const adv = document.querySelectorAll('.promo__adv img');
 const poster = document.querySelector('.promo__bg');
 const genre = poster.querySelector('.promo__genre');
 const movieList = document.querySelector('.promo__interactive-list');
-const addForm = document.querySelector('.form.add');
-const addInput = addForm.querySelector('.adding__imput');
+const addForm = document.querySelector('form.add');
+const addInput = addForm.querySelector('.adding__input');
 const checkbox = addForm.querySelector('[type="checkbox"]');
 
 addForm.addEventListener('submit', (event) => {
@@ -42,6 +43,9 @@ addForm.addEventListener('submit', (event) => {
 
         if (newFilm.length > 21) {
             newFilm = `${newFilm.substring(0, 22)}...`;
+        }
+        if (favorite) {
+            console.log("Добовляем новый фильм");
         }
 
         
@@ -78,10 +82,10 @@ addForm.addEventListener('submit', (event) => {
     };
 
 // movieList.remove();
-
-
     function createMovieList(films, parent) {
         parent.innerHTML = "";
+        sortArr(films);
+        
         films.forEach((film, i) => {
             parent.innerHTML += `
                 <li class="promo__interactive-item">${i +1} ${film}
@@ -89,13 +93,25 @@ addForm.addEventListener('submit', (event) => {
                 </li>
             `;
     });
+
+    document.querySelectorAll('.delete').forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+            btn.parentElement.remove();
+            movieDB.movies.splice(i, 1);
+
+            createMovieList(films, parent);
+        });
+    });
+
+
     }
-    createMovieList(movieDB.movies, movieList);
-    deleteAdv(reklama);
+    
+    deleteAdv(adv);
     makeChanges();
     sortArr(movieDB.movies);
+    createMovieList(movieDB.movies, movieList);
  
 
-
+});
 
 
