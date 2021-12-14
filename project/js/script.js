@@ -28,33 +28,77 @@ const reklama = document.querySelectorAll('.promo__adv');
 const poster = document.querySelector('.promo__bg');
 const genre = poster.querySelector('.promo__genre');
 const movieList = document.querySelector('.promo__interactive-list');
+const addForm = document.querySelector('.form.add');
+const addInput = addForm.querySelector('.adding__imput');
+const checkbox = addForm.querySelector('[type="checkbox"]');
+
+addForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let newFilm = addInput.value;
+    const favorite = checkbox.checked;
+
+    if (newFilm) {
+
+        if (newFilm.length > 21) {
+            newFilm = `${newFilm.substring(0, 22)}...`;
+        }
+
+        
+        movieDB.movies.push(newFilm);
+        sortArr(movieDB.movies);
+    
+        createMovieList(movieDB.movies, movieList);
+    }
+
+    
+    event.target.reset();
+
+});
+
 
 
 
 // reklama.style.display = 'none';
 // reklama.remove();
-reklama.forEach(item => {
-    item.remove();
-});
+
+    const deleteAdv = (arr) => {
+        arr.forEach(item => {
+            item.remove();
+        });
+    };
+    
 // reklama.forEach(function (item) {
 //     item.remove();
 // });
-genre.textContent ='драма';
-poster.style.backgroundImage ='url(../project/img/bg.jpg)';
+    const makeChanges = () => {
+        genre.textContent ='драма';
+        poster.style.backgroundImage ='url(../project/img/bg.jpg)';
+    };
+
+
+    const sortArr = (arr) => {
+        arr.sort();
+    };
 
 // movieList.remove();
-movieList.innerHTML = "";
-movieDB.movies.sort();
-
-movieDB.movies.forEach((film, i) => {
-    movieList.innerHTML += `
-    <li class="promo__interactive-item">${i +1} ${film}
-        <div class="delete"></div>
-    </li>
-        `;
-});
 
 
+    function createMovieList(films, parent) {
+        parent.innerHTML = "";
+        films.forEach((film, i) => {
+            parent.innerHTML += `
+                <li class="promo__interactive-item">${i +1} ${film}
+                    <div class="delete"></div>
+                </li>
+            `;
+    });
+    }
+    createMovieList(movieDB.movies, movieList);
+    deleteAdv(reklama);
+    makeChanges();
+    sortArr(movieDB.movies);
+ 
 
 
 

@@ -383,4 +383,3 @@
 // arr.forEach(function(item, i, arr){
 //     console.log(`${i}: ${item} ввнутри массива ${arr}`);
 // });
-alert(+"Infinity");
