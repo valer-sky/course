@@ -56,9 +56,6 @@ addForm.addEventListener('submit', (event) => {
 
 });
 
-
-
-
 // reklama.style.display = 'none';
 // reklama.remove();
 
@@ -75,7 +72,6 @@ addForm.addEventListener('submit', (event) => {
         genre.textContent ='драма';
         poster.style.backgroundImage ='url(../project/img/bg.jpg)';
     };
-
 
     const sortArr = (arr) => {
         arr.sort();
