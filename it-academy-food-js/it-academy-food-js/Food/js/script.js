@@ -35,7 +35,13 @@
         });
       }
     });
-    // 
+    //
+    const timerId = setTimeout(function() {
+console.log('Hello');
+    }, 2000);
+
+    
+
  });
 // window.addEventListener('DOMContentLoaded', function() {
 
