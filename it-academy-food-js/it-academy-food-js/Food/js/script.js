@@ -99,6 +99,20 @@
 
     setClock('.timer', deadline); //запускаем таймер функцией
 // 
+// Модальное окно
+const modalWindow = document.querySelector('[data-modal]'); //получаем объекты с HTML
+const modal = document.querySelector('.modal');
+const modalCloseBtn = document.querySelector('[data-close]');
+
+modalWindow.addEventListener('click', () => {   // обращаемся к стилям CSS и вешаем на них обработчик событий
+  modal.classList.add('show');
+  modal.classList.remove('hide');
+
+});
+modalCloseBtn.addEventListener('click', () => {
+  modal.classList.add('hide');
+  modal.classList.remove('show');
+});
 
  });
 // window.addEventListener('DOMContentLoaded', function() {
