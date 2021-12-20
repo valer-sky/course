@@ -100,19 +100,53 @@
     setClock('.timer', deadline); //запускаем таймер функцией
 // 
 // Модальное окно
-const modalWindow = document.querySelector('[data-modal]'); //получаем объекты с HTML
+const modalWindow = document.querySelectorAll('[data-modal]'); //получаем объекты с HTML
 const modal = document.querySelector('.modal');
 const modalCloseBtn = document.querySelector('[data-close]');
 
-modalWindow.addEventListener('click', () => {   // обращаемся к стилям CSS и вешаем на них обработчик событий
-  modal.classList.add('show');
-  modal.classList.remove('hide');
+      function openModal() {
+        modal.classList.add('show');
+        modal.classList.remove('hide');
+        document.body.style.overflow ='hidden'; // запрещаем скролл при открытом модальном окне
+        clearInterval(modalTimerId); // вызываем функцию если пользователь нажал "связаться с нами", модальное окно больше не откроется
 
+      }
+
+modalWindow.forEach(btn => {           // вешаем оброботчик событий на все кнопки
+  btn.addEventListener('click', openModal);   // обращаемся к стилям CSS и вешаем на них обработчик событий
+    
 });
-modalCloseBtn.addEventListener('click', () => {
+function closeModal() {
   modal.classList.add('hide');
   modal.classList.remove('show');
+  document.body.style.overflow =''; // возвощаем скролл
+}
+modalCloseBtn.addEventListener('click', closeModal);
+
+modal.addEventListener('click', (e) => {        //делаем закрытие модального окна щелчком по любому месту
+  if(e.target === modal) {
+    closeModal();
+    }
+  });
+
+document.addEventListener('keydown', (e) => {  // закрытие модального окна при помощи клавиши Esc
+  if(e.code === "Escape" && modal.classList.contains('show')) {
+    closeModal();
+  }
 });
+const modalTimerId = setTimeout(openModal, 3000); // создаем функцию по открытию модального окна спустя время
+
+function showModalByScroll() {                          //открытие модального окна когда пользователь прокрутил страничку до конца
+  if (window.pageYOffset + document.documentElement.clientHeight >= document.
+    documentElement.scrollHeight - 1) {
+      openModal();
+      window.removeEventListener('scroll', showModalByScroll); //запрещает повторное открытие при скролле вниз
+    }
+}
+
+window.addEventListener('scroll', showModalByScroll);  
+    
+
 
  });
 // window.addEventListener('DOMContentLoaded', function() {
