@@ -146,9 +146,80 @@ function showModalByScroll() {                          //открытие мо�
 
 window.addEventListener('scroll', showModalByScroll);  
     
+// Используем классы для карточек
 
+class MenuCard {
+  constructor(src, alt, title, descr, price, parentSeloctor, ...classes) {
+    this.src = src;
+    this.alt = alt;
+    this.title = title;
+    this.descr = descr;
+    this.price = price;
+    this.classes = classes;
+    this.parent = document.querySelector(parentSeloctor);
+    this.transfer = 2.54; // текущий курс доллара
+    this.changeToBlr();
+  }
+  changeToBlr() {    //конвертация в доллары или рубли
+     this.price = this.price * this.transfer;
+  }
+render(){
+   const element = document.createElement('div'); // достаем из верстки нашу карточку
+   if (this.classes.length === 0) {
+     this.element = 'menu__item';
+     element.classList.add(this.element);
+   } else{
+    this.classes.forEach(className => element.classList.add(className));
+   }
+   
+   element.innerHTML = `
+                  <img src=${this.src} alt=${this.alt}>   // достаем из верстки нашу карточку
+                    <h3 class="menu__item-subtitle">${this.title}</h3>
+                    <div class="menu__item-descr">${this.descr}</div>
+                    <div class="menu__item-divider"></div>
+                    <div class="menu__item-price">
+                        <div class="menu__item-cost">Цена:</div>
+                        <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
+                    </div>
+                
+                `;
+                this.parent.append(element);
+    }
+  }
 
- });
+  new MenuCard(  // создаем новую карточку с новой информацией и картинкой
+    "img/tabs/vegy.jpg",
+    "vegy",
+    'Меню "Фитнес"',
+    'Меню "Фитнес" - это новый подход к приготовлению б Это абсолютно новый продукт с оптимальной ценой и высоким качеством!',
+      5,
+      '.menu .container',
+      'menu__item',
+      'big'
+      
+  ).render();
+  new MenuCard(   // создаем новую карточку с новой информацией и картинкой
+    "img/tabs/elite.jpg",
+    "elite",
+    'Меню "Фитнес"',
+    'Меню "Фитнес" - это новый подход к приготовлению б Это абсолютно новый продукт с оптимальной ценой и высоким качеством!',
+      2,
+      '.menu .container',
+      'menu__item'
+      
+  ).render();
+  new MenuCard(  // создаем новую карточку с новой информацией и картинкой
+    "img/tabs/post.jpg",
+    "post",
+    'Меню "Фитнес"',
+    'Меню “Постное” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхожд.',
+      1,
+      '.menu .container',
+      'menu__item'
+      
+  ).render();
+
+});
 // window.addEventListener('DOMContentLoaded', function() {
 
 //     const content = [...document.querySelectorAll('.tabcontent')];//контент
