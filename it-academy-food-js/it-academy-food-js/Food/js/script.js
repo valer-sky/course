@@ -219,6 +219,8 @@ render(){
       
   ).render();
 
+  // Forms отправка форм
+
 });
 // window.addEventListener('DOMContentLoaded', function() {
 
