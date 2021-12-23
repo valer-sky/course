@@ -102,7 +102,7 @@
 // Модальное окно
 const modalWindow = document.querySelectorAll('[data-modal]'); //получаем объекты с HTML
 const modal = document.querySelector('.modal');
-const modalCloseBtn = document.querySelector('[data-close]');
+// const modalCloseBtn = document.querySelector('[data-close]');  // не нужна при оповощении пользователя (55)
 
       function openModal() {
         modal.classList.add('show');
@@ -121,10 +121,10 @@ function closeModal() {
   modal.classList.remove('show');
   document.body.style.overflow =''; // возвощаем скролл
 }
-modalCloseBtn.addEventListener('click', closeModal);
+// modalCloseBtn.addEventListener('click', closeModal); //55
 
 modal.addEventListener('click', (e) => {        //делаем закрытие модального окна щелчком по любому месту
-  if(e.target === modal) {
+  if(e.target === modal || e.target.getAttribute('data-close') == '') {
     closeModal();
     }
   });
@@ -134,7 +134,7 @@ document.addEventListener('keydown', (e) => {  // закрытие модаль�
     closeModal();
   }
 });
-const modalTimerId = setTimeout(openModal, 3000); // создаем функцию по открытию модального окна спустя время
+const modalTimerId = setTimeout(openModal, 50000); // создаем функцию по открытию модального окна спустя время
 
 function showModalByScroll() {                          //открытие модального окна когда пользователь прокрутил страничку до конца
   if (window.pageYOffset + document.documentElement.clientHeight >= document.
@@ -220,6 +220,103 @@ render(){
   ).render();
 
   // Forms отправка форм
+
+const forms = document.querySelectorAll('form'); // достаем все формы по тегу form
+
+const message = {  //список ситуаций при отправке сообщений
+  loading: 'img/form/spinner.svg',
+  success: 'Спасибо! Скоро мы с вами свяжемся',
+  failure: 'Что-то пощло не так...'
+
+
+};
+
+forms.forEach(item => {
+  postData(item); //обработчик события при отправке
+});
+
+function postData(form) {   //функция по отправке сообщений
+  form.addEventListener('submit', (e) => {   //вешаем обработчик события на кнопку
+    e.preventDefault();    //запрещаем страничке перезагружаться
+
+    const statusMessage = document.createElement('img'); //создаем спиннер 
+    statusMessage.scrollHeight = message.loading; //добовляем к нему класс
+    statusMessage.style.cssText = `
+    display: block;
+    margin: 0 auto;
+    `;
+    // form.append(statusMessage);
+    form.insertAdjacentElement('aferend', statusMessage);
+    const formData = new FormData(form);
+
+
+   
+
+     // Для отправки через JSON
+    const object = {};
+
+    formData.forEach(function(value,key) {
+      object[key] = value;
+    });
+    
+
+    fetch('server.php', {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(object)
+    }).then(data => data.text())
+    .then(data => {
+      console.log(data); //данные которые возврощаются из промеса
+      showThanksModal(message.success);
+      form.reset();  //ошищаем поле ввода после отправки
+        
+      statusMessage.remove();   //выключаем сообщение пользователю (мы свяжемся с вами) спустя 2 секунды
+    }).catch(() => {
+      showThanksModal(message.failure);
+    }).finally(() => {
+      form.reset();
+    });
+    
+    // request.send(json);
+
+    
+
+    // request.send(formData);
+
+    
+
+  });
+
+}
+
+function showThanksModal(message) {
+  const prevModalDialog = document.querySelector('.modal__dialog'); // получаем по селектору наш элемент
+
+  prevModalDialog.classList.add('hide');//скрываем предыдущий контент
+  openModal(); //функция отвечающая за открытие модальных окон на нашем сайте
+
+  //создание нового контента
+  const thanksModal = document.createElement('div'); //блок обвертка
+  thanksModal.classList.add('.modal__dialog');
+  //формирование верстки которая будет находится в этом окне
+  thanksModal.innerHTML = `                        
+  <div class="modal__content">
+   <div class="modal__close" data-close>&times;</div>
+   <div class="modal__title">${message}</div>
+  </div>
+  `;
+    document.querySelector('.modal').append(thanksModal); 
+    setTimeout(() => {
+      thanksModal.remove();
+      prevModalDialog.classList.add('show');
+      prevModalDialog.classList.remove('hide');
+      closeModal();
+    }, 4000);                                                
+}
+
+
 
 });
 // window.addEventListener('DOMContentLoaded', function() {
