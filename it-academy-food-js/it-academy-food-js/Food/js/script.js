@@ -171,9 +171,9 @@ render(){
    } else{
     this.classes.forEach(className => element.classList.add(className));
    }
-   
-   element.innerHTML = `
-                  <img src=${this.src} alt=${this.alt}>   // достаем из верстки нашу карточку
+   // достаем из верстки нашу карточку
+   element.innerHTML = `      
+                  <img src=${this.src} alt=${this.alt}>   
                     <h3 class="menu__item-subtitle">${this.title}</h3>
                     <div class="menu__item-descr">${this.descr}</div>
                     <div class="menu__item-divider"></div>
@@ -186,38 +186,27 @@ render(){
                 this.parent.append(element);
     }
   }
+  const getResource = async (url, ) => {   //получаем данныес сервера
+    const res = await fetch(url);
+     if (!res.ok) {
+       throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+     }
+    return await res.json();
+   };
+   getResource('http://localhost:3000/menu')
+   .then(data => {
+     data.forEach(({img, altimg, title, descr, price}) => {
+       new MenuCard(img, altimg, title, descr, price, '.menu .container').render();
+     });
+   }); 
 
-  new MenuCard(  // создаем новую карточку с новой информацией и картинкой
-    "img/tabs/vegy.jpg",
-    "vegy",
-    'Меню "Фитнес"',
-    'Меню "Фитнес" - это новый подход к приготовлению б Это абсолютно новый продукт с оптимальной ценой и высоким качеством!',
-      5,
-      '.menu .container',
-      'menu__item',
-      'big'
-      
-  ).render();
-  new MenuCard(   // создаем новую карточку с новой информацией и картинкой
-    "img/tabs/elite.jpg",
-    "elite",
-    'Меню "Фитнес"',
-    'Меню "Фитнес" - это новый подход к приготовлению б Это абсолютно новый продукт с оптимальной ценой и высоким качеством!',
-      2,
-      '.menu .container',
-      'menu__item'
-      
-  ).render();
-  new MenuCard(  // создаем новую карточку с новой информацией и картинкой
-    "img/tabs/post.jpg",
-    "post",
-    'Меню "Фитнес"',
-    'Меню “Постное” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхожд.',
-      1,
-      '.menu .container',
-      'menu__item'
-      
-  ).render();
+
+  // axios.get('http://localhost:3000/menu')     // использование библиотеки axios вместо кода выше
+  // .then(data => {
+  //   data.data.forEach(({img, altimg, title, descr, price}) => {
+  //     new MenuCard(img, altimg, title, descr, price, '.menu .container').render();
+  //   });
+  // });
 
   // Forms отправка форм
 
@@ -231,11 +220,23 @@ const message = {  //список ситуаций при отправке со�
 
 };
 
+
 forms.forEach(item => {
-  postData(item); //обработчик события при отправке
+  bindPostData(item); //обработчик события при отправке
 });
 
-function postData(form) {   //функция по отправке сообщений
+const postData = async (url, data) => {
+ const res = await fetch(url, {
+  method: "POST",
+  headers: {
+    'Content-type': 'application/json'
+  },
+  body: data
+ });
+ return await res.json();
+};
+
+function bindPostData(form) {   //функция по отправке сообщений
   form.addEventListener('submit', (e) => {   //вешаем обработчик события на кнопку
     e.preventDefault();    //запрещаем страничке перезагружаться
 
@@ -253,20 +254,10 @@ function postData(form) {   //функция по отправке сообще�
    
 
      // Для отправки через JSON
-    const object = {};
-
-    formData.forEach(function(value,key) {
-      object[key] = value;
-    });
+    const json = JSON.stringify(Object.fromEntries(formData.entries()));
     
-
-    fetch('server.php', {
-      method: "POST",
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify(object)
-    }).then(data => data.text())
+    postData('http://localhost:3000/requests', json)
+    
     .then(data => {
       console.log(data); //данные которые возврощаются из промеса
       showThanksModal(message.success);
@@ -316,7 +307,9 @@ function showThanksModal(message) {
     }, 4000);                                                
 }
 
-
+fetch('db.json')
+.then(data => data.json())
+.then(res => console.log(res));
 
 });
 // window.addEventListener('DOMContentLoaded', function() {
