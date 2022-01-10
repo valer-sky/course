@@ -137,7 +137,7 @@ document.addEventListener('keydown', (e) => {  // закрытие модаль�
 });
 const modalTimerId = setTimeout(openModal, 50000); // создаем функцию по открытию модального окна спустя время
 
-function showModalByScroll() {                          //открытие модального окна когда пользователь прокрутил страничку до конца
+function showModalByScroll() {                          //открытие модального окна когда пользователь прокрутил страничку до конц
   if (window.pageYOffset + document.documentElement.clientHeight >= document.
     documentElement.scrollHeight - 1) {
       openModal();
