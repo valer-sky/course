@@ -1,4 +1,5 @@
- window.addEventListener('DOMContentLoaded', function() {
+
+window.addEventListener('DOMContentLoaded', function() {
 //  Табы
  
   const tabs = document.querySelectorAll('.tabheader__item'), // на что кликаем
@@ -42,7 +43,7 @@
 
     //ТАЙМЕР
 
-    const deadline = '2022-01-01';
+    const deadline = '2022-01-31';
 
     function getTimeRemaining(endtime) {      // математически округляем числа
       const t = Date.parse(endtime) - new Date(),
@@ -226,7 +227,7 @@ forms.forEach(item => {
 });
 
 const postData = async (url, data) => {
- const res = await fetch(url, {
+const res = await fetch(url, {
   method: "POST",
   headers: {
     'Content-type': 'application/json'
@@ -307,11 +308,66 @@ function showThanksModal(message) {
     }, 4000);                                                
 }
 
-fetch('db.json')
-.then(data => data.json())
-.then(res => console.log(res));
+// Slider
+
+let slideIndex = 1;
+const slides = document.querySelectorAll('.offer__slide'),
+    prev = document.querySelector('.offer__slider-prev'),
+    next = document.querySelector('.offer__slider-next'),
+    total = document.querySelector('#total'),
+    current = document.querySelector('#current');
+
+showSlides(slideIndex);
+
+if (slides.length < 10) {
+    total.textContent = `0${slides.length}`;
+} else {
+    total.textContent = slides.length;
+}
+
+function showSlides(n) {
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    slides.forEach((item) => item.style.display = 'none');
+
+    slides[slideIndex - 1].style.display = 'block'; // Как ваша самостоятельная работа - переписать на использование классов show/hide
+    
+    if (slides.length < 10) {
+        current.textContent =  `0${slideIndex}`;
+    } else {
+        current.textContent =  slideIndex;
+    }
+}
+
+function plusSlides (n) {
+    showSlides(slideIndex += n);
+}
+
+prev.addEventListener('click', function(){
+    plusSlides(-1);
+});
+
+next.addEventListener('click', function(){
+    plusSlides(1);
+});
+
+// fetch('db.json')
+// .then(data => data.json())
+// .then(res => console.log(res));
 
 });
+
+
+
+
+   
+
+  
 // window.addEventListener('DOMContentLoaded', function() {
 
 //     const content = [...document.querySelectorAll('.tabcontent')];//контент
